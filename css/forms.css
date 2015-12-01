@@ -1,0 +1,114 @@
+body {
+  font-family: sans-serif;
+  font-size: 13px; }
+
+th {
+  text-align: left; }
+
+@media only screen and (min-width: 768px) {
+  input[type=text], input[type=email], input[type=password], input[type=search], textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    min-height: 28px;
+    padding: 4px 20px 4px 8px;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+    width: 200px; }
+
+  input[type=radio] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+  input[type=search] {
+    width: 70%; }
+
+  textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    font-size: 12px;
+    height: 150px;
+    max-height: 150px;
+    max-width: 290px;
+    min-height: 28px;
+    padding: 4px 20px 4px 8px;
+    width: 290px; }
+
+  #postTitle {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    min-height: 28px;
+    padding: 4px 20px 4px 8px;
+    width: 100%; }
+
+  input[type=submit], select {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    min-height: 28px;
+    padding: 4px 20px 4px 8px; }
+
+  input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px rgba(81, 167, 232, 0.5);
+    outline: none;
+    width: 400px; }
+
+  input[type=radio]:focus, select {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px rgba(81, 167, 232, 0.5);
+    outline: none; }
+
+  input[type=search]:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px rgba(81, 167, 232, 0.5);
+    outline: none; }
+
+  textarea:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px rgba(81, 167, 232, 0.5);
+    outline: none; }
+
+  #postTitle:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px rgba(81, 167, 232, 0.5);
+    outline: none; } }
+@media only screen and (max-width: 600px) {
+  input[type=text], input[type=email], input[type=password], input[type=search], textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    min-height: 28px;
+    padding: 4px 20px 4px 8px;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+
+  input[type=submit], select {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    min-height: 28px;
+    padding: 4px 20px 4px 8px; }
+
+  input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px rgba(81, 167, 232, 0.5);
+    outline: none; }
+
+  textarea:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px rgba(81, 167, 232, 0.5);
+    outline: none; } }
+
+/*# sourceMappingURL=forms.css.map */

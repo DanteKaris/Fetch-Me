@@ -1,0 +1,114 @@
+header {
+  background: -webkit-linear-gradient(left top, red , blue); /* For Safari 5.1 to 6.0 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(100%, blue)); /* Chrome,Safari4+ */
+  background:    -moz-linear-gradient(bottom right, red, blue); /* For Firefox 3.6 to 15 */
+  background:     -ms-linear-gradient(bottom right, red, blue); /* For IE < 8 */
+  background:      -o-linear-gradient(bottom right, red, blue); /* For Opera 11.1 to 12.0 */
+  background:         linear-gradient(to bottom right, red , blue);  /* Standard syntax */
+  padding: 10px;
+
+  .logo {
+    float: left;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+  nav {
+    display: inline-flex;
+    margin-left: 10%;
+
+    a {
+      color: #fff;
+      display: block;
+      padding: 10px 30px;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        border-left: solid 1px #1e2a36;
+        float: left;
+        text-align: right;
+      }
+
+      li:first-child {
+        border-left: none;
+      }
+    }
+
+    .dropdown, .flyout {
+      position: relative;
+
+      .dropdown-nav, .flyout-nav {
+        display: none;
+        left: 0;
+        position: absolute;
+
+        li {
+          border: 1px solid rgb(255, 255, 255);
+          border: 1px solid rgba(255, 255, 255, .2);
+        }
+      }
+    }
+
+    /*.dropdown:after {
+      color: white;
+      content: "\25BC";
+      font-size: .5em;
+      display: block;
+      position: absolute;
+      top: 38%;
+      right: 12%;
+    }*/
+
+    .dropdown:hover > .dropdown-nav,
+    .flyout:hover > .flyout-nav {
+      display: inline-flex;
+
+      li {
+        border-right: none;
+      }
+    }
+
+    .flyout-nav, .flyout:hover a {
+      background: #395066;
+    }
+  }
+}
+
+// For auto-suggest search bar
+#results {
+  background: -webkit-linear-gradient(left top, red , blue); /* For Safari 5.1 to 6.0 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(100%, blue)); /* Chrome,Safari4+ */
+  background:    -moz-linear-gradient(bottom right, red, blue); /* For Firefox 3.6 to 15 */
+  background:     -ms-linear-gradient(bottom right, red, blue); /* For IE < 8 */
+  background:      -o-linear-gradient(bottom right, red, blue); /* For Opera 11.1 to 12.0 */
+  background:         linear-gradient(to bottom right, red , blue);  /* Standard syntax */
+  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, .2);
+  box-sizing: border-box;
+  max-height: 130px;/*
+  overflow: hidden;
+  overflow-x: hidden;*/
+  overflow-y:scroll;
+  position: absolute;
+  width: 200px;
+
+  a {
+    color: whitesmoke;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: darkblue;
+  }
+}
