@@ -24,57 +24,48 @@ session_start();
 <?php
 require '../php/header_ad.inc.php';
 require '../php/db/connect.inc.php';
+?>
 
+  <form action="requests.php" method="post">
+    <table>
+
+<?php
 $usersQuery = "SELECT * FROM users WHERE approved = 'n'";
 $newUsers = $conn->query($usersQuery);
 
 if ($newUsers->num_rows > 0) {
-    echo '
-    <table>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Gender</th>
-        <th>Email</th>
-        <th>Username</th>
-      </tr>';
-
-    while ($user = $newUsers->fetch_assoc()) {
-        $f_name = $user['first_name'];
-        $l_name = $user['last_name'];
-        $gender = $user['gender'];
-        $email = $user['email'];
-        $username = $user['username'];
-
+    while ($row = $newUsers->fetch_assoc()) {
         echo '
         <tr>
-          <td>'.$f_name.'</td>
-          <td>'.$l_name.'</td>
-          <td>'.$gender.'</td>
-          <td>'.$email.'</td>
-          <td>'.$username.'</td>
-          <td><button class="approve" value="">Approve</button>
-          <td><button class="deny" onclick="deny()">Deny</button>
-          <td><button class="suspend" onclick="suspend()">Suspend</button>
-        </tr>';
+          <th><input type="checkbox" value="'. $row['id']. '" name="toApprove[]" /></th>
+          <td>'.$row['first_name'].'</td>
+          <td>'.$row['last_name'].'</td>
+          <td>'.$row['gender'].'</td>
+          <td>'.$row['email'].'</td>
+          <td>'.$row['username'].'</td>
+        </tr>
+        ';
     }
+
+    if (isset($_POST['submit'])) {
+        // Delete rows
+        foreach ($_POST['toApprove'] as $approve_id) {
+            $approve = "UPDATE users SET approved ='y' WHERE id = '".$approve_id."'";
+            $conn->query($approve) or die('Could not query database');
+        }
+        $conn->close;
+        header('Location: requests.php');
+    }
+
+} else {
+    echo 'No requests to approve';
 }
 ?>
-  <script src="../js/jquery.js"></script>
-  <script>
-    $(document).ready( function () {
-        $(".approve").click( function () {
-            window.alert('Approved');
-        });
 
-        $(".approve").click( function () {
-            window.alert('Denied');
-        });
-
-        $(".approve").click( function () {
-            window.alert('Suspended');
-        });
-    });
-  </script>
+      <tr>
+        <td><input type="submit" name="submit" value="Approve" /></td>
+      </tr>
+    </table>
+  </form>
 </body>
 </html>
