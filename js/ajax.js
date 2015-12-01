@@ -44,42 +44,62 @@ searchBar.addEventListener("keyup", function findPosts() {
     ajaxCall(searchURL, searchResults);
 }, false);
 
-// Ajax call for feed
-window.addEventListener("load", function loadPosts() {
+$(document).ready(function () {
     "use strict";
 
-    var postsURL = '../php/dash.php',
-        feed = document.getElementById("feed");
+    $.ajax({
+        type : 'GET', // set request type GET or POST
+        url : '../php/dash.php', // data URL
+        dataType : 'html', // type: xml, json, script, or html
+        success : function (data) {
+            // if the call is a success do this
+            $("#feed").html(data);
+        },
+        error : function () {
+            // if the call fails do this
+            window.alert('an ajax error occurred');
+        }
+    }); // end Ajax call
 
-    setInterval(ajaxCall(postsURL, feed), 5000);
-}, false);
+    $.ajax({
+        type : 'GET', // set request type GET or POST
+        url : '../php/edu.inc.php', // data URL
+        dataType : 'html', // type: xml, json, script, or html
+        success : function (data) {
+            // if the call is a success do this
+            $("#eduPosts").html(data);
+        },
+        error : function () {
+            // if the call fails do this
+            window.alert('an ajax error occurred');
+        }
+    }); // end Ajax call
 
-// Ajax call for education posts
-window.addEventListener("load", function loadPosts() {
-    "use strict";
+    $.ajax({
+        type : 'GET', // set request type GET or POST
+        url : '../php/ent.inc.php', // data URL
+        dataType : 'html', // type: xml, json, script, or html
+        success : function (data) {
+            // if the call is a success do this
+            $("#entPosts").html(data);
+        },
+        error : function () {
+            // if the call fails do this
+            window.alert('an ajax error occurred');
+        }
+    }); // end Ajax call
 
-    var postsURL = '../php/edu.inc.php',
-        feed = document.getElementById("eduPosts");
-
-    setInterval(ajaxCall(postsURL, feed), 5000);
-}, false);
-
-// Ajax call for entertainment posts
-window.addEventListener("load", function loadPosts() {
-    "use strict";
-
-    var postsURL = '../php/ent.inc.php',
-        feed = document.getElementById("entPosts");
-
-    setInterval(ajaxCall(postsURL, feed), 5000);
-}, false);
-
-// Ajax call for sport posts
-window.addEventListener("load", function loadPosts() {
-    "use strict";
-
-    var postsURL = '../php/sports.inc.php',
-        feed = document.getElementById("sportPosts");
-
-    setInterval(ajaxCall(postsURL, feed), 5000);
-}, false);
+    $.ajax({
+        type : 'GET', // set request type GET or POST
+        url : '../php/sports.inc.php', // data URL
+        dataType : 'html', // type: xml, json, script, or html
+        success : function (data) {
+            // if the call is a success do this
+            $("#sportPosts").html(data);
+        },
+        error : function () {
+            // if the call fails do this
+            window.alert('an ajax error occurred');
+        }
+    }); // end Ajax call
+}); // close document.ready

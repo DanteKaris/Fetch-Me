@@ -1,5 +1,7 @@
-$('document').ready(function () {
-    "use strict";
+$(document).ready(function () {
+        "use strict";
 
-    $(".post").fadeIn('slow');
-});
+        $("#btn").click(function () {
+            $("#try").fadeToggle();
+        });
+    });

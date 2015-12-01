@@ -21,7 +21,7 @@ include '../php/header_ad.inc.php';
 
   <section id="page">
        <div class="row">
-           <div class="col-3 col-m-12">
+           <div class="col-3 col-m-12" id="newFetch">
              <!-- Form for creating a new post -->
              <form enctype="multipart/form-data" id="createPost" name="createPost" action="../php/addPost.php" method="POST">
                <table>
@@ -67,11 +67,10 @@ include '../php/header_ad.inc.php';
                </table>
              </form>
            </div>
-           <div class="col-9 col-m-12" id="feed"></div>
+         <div class="col-9 col-m-12" id="feed"></div>
        </div>
    </section>
 
-    <div id="del"></div>
   <script src="../js/jquery.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/ajax.js"></script>

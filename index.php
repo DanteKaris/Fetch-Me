@@ -7,7 +7,7 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Fetch Me! || Login</title>
+  <title>Fetch Me!</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/forms.css" />
   <link type="image/icon" rel="icon" href="../img/favicon.png" height="32px" width="32px" />
@@ -38,6 +38,44 @@ session_start();
   <div class="row">
     <div class="col-12">
       <img src="img/hero.jpg" id="bgvid" />
+      <!--<ul class="cb-slideshow">
+	    <li>
+		  <span>Image 01</span>
+		    <div>
+			  <h3>re·lax·a·tion</h3>
+		    </div>
+	    </li>
+	    <li>
+	      <span>Image 01</span>
+		  <div>
+			<h3>Di·vi·ni·ty</h3>
+		  </div>
+	    </li>
+	    <li>
+	      <span>Image 01</span>
+		  <div>
+			<h3>Tem·pe·rance</h3>
+		  </div>
+	    </li>
+	    <li>
+		  <span>Image 01</span>
+		    <div>
+			  <h3>re·lax·a·tion</h3>
+		    </div>
+	    </li>
+	    <li>
+	      <span>Image 01</span>
+		  <div>
+			<h3>Di·vi·ni·ty</h3>
+		  </div>
+	    </li>
+	    <li>
+	      <span>Image 01</span>
+		  <div>
+			<h3>Tem·pe·rance</h3>
+		  </div>
+	    </li>
+      </ul>-->
     </div>
   </div>
 

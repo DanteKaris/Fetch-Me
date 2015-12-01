@@ -1,7 +1,6 @@
 <?php
 session_start();
 require 'db/connect.inc.php';
-
 // Query for selecting matching post titles
 $postsQuery = "SELECT * FROM posts ORDER BY post_id DESC";
 $posts = $conn->query($postsQuery);
@@ -14,25 +13,26 @@ while ($post = mysqli_fetch_assoc($posts)) {
     $postBy = $post['username'];
     $timestamp = $post['date_time'];
     $sub_category = $post['sub_category'];
-
+    $category = $post['category'];
     // Div to output
     echo '
     <div class="post" id="'.$post_id.'">
-      <a href="#">'. $title. '</a>. <span><em>Posted by</em> '. $postBy. ' on '. $timestamp. '</span>
+      <span class="title">'.$title. '</span> <span><em>Posted by</em> '. $postBy. ' on '. $timestamp. '</span>
       <hr />
       <p>'. $content. '</p><br />
-      <span class="sub-category">' .$sub_category. '</span><br />';
+      <span class="sub-category">' .$sub_category. '</span><br /><br />';
 
     if ($postBy == $_SESSION['user'] || $_SESSION['admin'] == 'y') {
         echo '
         <form action="../php/deletePost.php" method="GET">
           <input type="hidden" name="post_id" value="'.$post_id.'" />
-          <input type="submit" name="delete" value="Delete" /><br /><br />
+          <input class="delete" type="submit" name="delete" value="Delete" /><br /><br />
         </form>';
     }
 
     echo '
-    <span class="comment">&gt;&gt; See comments</span><br /><dv class="comments">';
+    '/*<button class="comment">&gt;&gt; See comments</button><br />*/.'
+    <div class="comments">';
 
     // Get all the comments
     $commentsQuery = "SELECT * FROM comments WHERE post_id='".$post_id."' ORDER BY comment_id ASC";
@@ -55,7 +55,7 @@ while ($post = mysqli_fetch_assoc($posts)) {
             echo '
             <form action="../php/deleteComment.php" method="GET">
               <input type="hidden" name="comment_id" value="'.$comment_id.'" />
-              <input type="submit" name="delete" value="Delete" /><br /><br />
+              <input class="delete" type="submit" name="delete" value="Delete" /><br /><br />
             </form>
             ';
         }
@@ -91,3 +91,4 @@ while ($post = mysqli_fetch_assoc($posts)) {
     </div>
     <hr />';
 }
+?>

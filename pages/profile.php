@@ -14,6 +14,13 @@ session_start();
 </head>
 <body>
 <?php
+if ($_SESSION['admin'] == 'n') {
+    include '../php/header.inc.php';
+
+} elseif ($_SESSION['admin'] == 'y') {
+    include '../php/header_ad.inc.php';
+}
+
 if (isset($_SESSION['user'])) {
     $user = $_SESSION['user'];
     require '../php/db/connect.inc.php';
@@ -53,41 +60,19 @@ if (isset($_SESSION['user'])) {
           <td>
             <input type="email" name="email" required placeholder="<?php echo $email; ?>" disabled />
           </td>
-          <td>
-              <button id="changeEmail" onclick="edit();">Edit</button>
-          </td>
         </tr>
         <tr>
           <th><label for="username"><i class="material-icons">perm_identity</i></label></th>
           <td>
             <input type="text" name="username" placeholder="<?php echo $username; ?>" required disabled />
           </td>
-          <td>
-              <button id="changeUsername" onclick="edit();">Edit</button>
-          </td>
         </tr>
         <tr>
           <th><label for="password"><i class="material-icons">lock</i></label></th>
           <td><input type="password" name="password" placeholder="<?php echo $password; ?>" required disabled /></td>
-          <td><button id="changePassword" onclick="edit();">Edit</button></td>
-        </tr>
-        <tr>
-          <td><input type="submit" name="submit" value="Save" /></td>
         </tr>
       </table>
     </fieldset>
   </form>
-
-  <script>
-      var changeEmail = document.getElementById('email'),
-          changeUsername = document.getElementById('username'),
-          changePassword = document.getElementById('password');
-
-      email.addEventListener("click", function edit() {
-          "use strict";
-
-          edit.changeEmail.setAttribute("disabled", "");
-      }, false);
-  </script>
 </body>
 </html>
