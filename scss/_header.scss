@@ -33,14 +33,19 @@ header {
       padding: 0;
 
       li {
-        border-left: solid 1px #1e2a36;
+//        border-left: solid 1px #1e2a36;
         float: left;
         text-align: right;
+        transition: all .2s ease-in;
       }
 
       li:first-child {
         border-left: none;
       }
+    }
+
+    li:hover {
+      background-color: rgba(0, 0, 225, .2);
     }
 
     .dropdown, .flyout {
@@ -50,14 +55,14 @@ header {
         display: none;
         left: 0;
         position: absolute;
+        transition: all .3s ease-in;
 
         li {
-          border: 1px solid rgb(255, 255, 255);
-          border: 1px solid rgba(255, 255, 255, .2);
+//          border: 1px solid rgb(255, 255, 255);
+//          border: 1px solid rgba(255, 255, 255, .2);
         }
       }
     }
-
     /*.dropdown:after {
       color: white;
       content: "\25BC";
@@ -78,7 +83,7 @@ header {
     }
 
     .flyout-nav, .flyout:hover a {
-      background: #395066;
+      background-color: rgba(0, 0, 225, .2);
     }
   }
 }

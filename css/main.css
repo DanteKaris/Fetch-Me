@@ -57,20 +57,20 @@ header {
       margin: 0;
       padding: 0; }
       header nav ul li {
-        border-left: solid 1px #1e2a36;
         float: left;
-        text-align: right; }
+        text-align: right;
+        transition: all .2s ease-in; }
       header nav ul li:first-child {
         border-left: none; }
+    header nav li:hover {
+      background-color: rgba(0, 0, 225, 0.2); }
     header nav .dropdown, header nav .flyout {
       position: relative; }
       header nav .dropdown .dropdown-nav, header nav .dropdown .flyout-nav, header nav .flyout .dropdown-nav, header nav .flyout .flyout-nav {
         display: none;
         left: 0;
-        position: absolute; }
-        header nav .dropdown .dropdown-nav li, header nav .dropdown .flyout-nav li, header nav .flyout .dropdown-nav li, header nav .flyout .flyout-nav li {
-          border: 1px solid white;
-          border: 1px solid rgba(255, 255, 255, 0.2); }
+        position: absolute;
+        transition: all .3s ease-in; }
     header nav .dropdown:hover > .dropdown-nav,
     header nav .flyout:hover > .flyout-nav {
       display: inline-flex; }
@@ -78,7 +78,7 @@ header {
       header nav .flyout:hover > .flyout-nav li {
         border-right: none; }
     header nav .flyout-nav, header nav .flyout:hover a {
-      background: #395066; }
+      background-color: rgba(0, 0, 225, 0.2); }
 
 #results {
   background: -webkit-linear-gradient(left top, red, blue);
@@ -222,6 +222,43 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0; }
+
+#index {
+  background-color: skyblue; }
+
+@media only screen and (min-width: 768px) {
+  #bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url("img/hero.jpg") no-repeat;
+    background-size: cover; } }
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url(polina.jpg) #000 no-repeat center center fixed; }
+
+  #bgvid {
+    display: none; } }
+.box-login {
+  background-color: rgba(255, 0, 0, 0.6);
+  transition: all .2s linear; }
+
+.box-signup {
+  background-color: rgba(0, 0, 255, 0.6);
+  transition: all .2s linear; }
+
+.box-login:hover {
+  background-color: whitesmoke; }
+
+.box-signup:hover {
+  background-color: whitesmoke; }
 
 .post {
   background-color: blue;

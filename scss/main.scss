@@ -83,6 +83,54 @@ body {
   padding: 0;
 }
 
+#index {
+  background-color: skyblue;
+}
+
+@media only screen and (min-width: 768px) {
+  #bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url('img/hero.jpg') no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-device-width: 800px) {
+    html {
+         background: url(polina.jpg) #000 no-repeat center center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
+}
+
+.box-login {
+  background-color: rgba(255, 0, 0, .6);
+  transition: all .2s linear;
+}
+
+.box-signup {
+  background-color: rgba(0, 0, 255, .6);
+  transition: all .2s linear;
+}
+
+.box-login:hover {
+  background-color: whitesmoke;
+}
+
+.box-signup:hover {
+  background-color: whitesmoke;
+}
+
 .post {
   background-color: rgb(0, 0, 255);
   background-color: rgba(0, 0, 255, .2);
