@@ -4,8 +4,8 @@ require 'db/connect.inc.php';
 
 if (isset($_POST['post'])) {
     // User credientials
-    $title = $_POST['postTitle'];
-    $content = $_POST['newPost'];
+    $title = $conn->real_escape_string($_POST['postTitle']);
+    $content = $conn->real_escape_string($_POST['newPost']);
     $subCategory = $_POST['subCategory'];
     $username = $_SESSION['user'];
     $time = time();

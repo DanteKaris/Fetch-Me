@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +11,18 @@
 </head>
 <body>
   <div class="row">
-    <div class="col-12">
-      <a href="forms/signup.php">Register</a>
+    <div class="col-6">
+<?php
+if (isset($_SESSION['user'])) {
+    include 'forms/signup.php';
+} else {
+?>
     </div>
-    <div class="col-12">
-      <a href="forms/login.php">Login</a>
+    <div class="col-6">
+<?php
+    include 'forms/login.php';
+}
+?>
     </div>
   </div>
 </body>

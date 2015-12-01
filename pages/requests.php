@@ -12,12 +12,6 @@ session_start();
   <link rel="stylesheet" href="../css/forms.css" />
   <link type="image/icon" rel="icon" href="../img/favicon_32.png" />
   <link type="image/icon" rel="icon" href="../img/favicon_16.png" />
-  <style>
-    tr:nth-child(even) {
-      background-color: whitesmoke;
-      border-collapse: collapse;
-    }
-  </style>
 </head>
 <body>
 

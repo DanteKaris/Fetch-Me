@@ -1,10 +1,3 @@
-<script>
-    $(document).ready(function(){
-        $(".comment").click(function(){
-            $(".comments").slideToggle("slow");
-        });
-    });
-</script>
 <?php
 session_start();
 require 'db/connect.inc.php';
@@ -12,13 +5,6 @@ require 'db/connect.inc.php';
 // Query for selecting matching post titles
 $postsQuery = "SELECT * FROM posts ORDER BY post_id DESC";
 $posts = $conn->query($postsQuery);
-
-
-// Added
-$usersQuery = "SELECT * FROM users WHERE username = '".$_SESSION['user']."'";
-$users = $conn->query($usersQuery);
-$user = mysqli_fetch_assoc($users);
-$photo = $user['profile_photo'];
 
 while ($post = mysqli_fetch_assoc($posts)) {
     // Post variables

@@ -70,13 +70,13 @@ require '../php/db/connect.inc.php';
 
 if (isset($_POST['submit'])) {
     // User credientials
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $gender = $_POST['gender'];
-    $email = $_POST['email'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $conf_password = $_POST['confirmPass'];
+    $firstname = $conn->real_escape_string($_POST['firstname']);
+    $lastname = $conn->real_escape_string($_POST['lastname']);
+    $gender = $conn->real_escape_string($_POST['gender']);
+    $email = $conn->real_escape_string($_POST['email']);
+    $username = $conn->real_escape_string($_POST['username']);
+    $password = $conn->real_escape_string($_POST['password']);
+    $conf_password = $conn->real_escape_string($_POST['confirmPass']);
     $mdPass = md5($password);
     $admin = 'n';
     $approved = 'n';
@@ -117,8 +117,7 @@ if (isset($_POST['submit'])) {
                 $_SESSION['user_id'] = $data['id'];
                 $_SESSION['username'] = $data['username'];
                 $_SESSION['admin'] = $data['admin'];
-                // Redirect user to their new homepage
-//                header('Location: ../pages/dashboard.php');
+
                 echo 'Waiting for admin to confirm request';
             }
         }

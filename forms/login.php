@@ -54,8 +54,8 @@ if (isset($_POST['submit'])) {
 
     } else {
         // Define $username and $password
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = $conn->real_escape_string($_POST['username']);
+        $password = $conn->real_escape_string($_POST['password']);
         $mdPass = md5($password);
 
         // SQL query to fetch information of registerd users and finds user match.

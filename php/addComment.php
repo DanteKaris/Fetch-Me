@@ -4,7 +4,7 @@ require 'db/connect.inc.php';
 
 if (isset($_POST['addComment'])) {
     // User credientials
-    $comment = $_POST['comment'];
+    $comment = $conn->real_escape_string($_POST['comment']);
     $username = $_SESSION['user'];
     $post_id = $_POST['post_id'];
     $time = time();
