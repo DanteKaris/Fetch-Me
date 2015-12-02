@@ -37,7 +37,7 @@ session_start();
 
   <div class="row">
     <div class="col-12">
-      <img src="img/hero.jpg" id="bgvid" />
+      <img src="img/hero5.jpg" id="bgvid" />
       <!--<ul class="cb-slideshow">
 	    <li>
 		  <span>Image 01</span>

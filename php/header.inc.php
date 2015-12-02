@@ -31,11 +31,11 @@
                       <li><a href="#">Anime</a></li>
                     </ul>
                   </li>
-                  <li class="flyout"><a href="travel.php"><i class="material-icons">flight_takeoff</i> Travel</a>
+                  <!--<li class="flyout"><a href="travel.php"><i class="material-icons">flight_takeoff</i> Travel</a>
                     <ul class="flyout-nav">
                       <li><a href="#">Dorms</a></li>
                     </ul>
-                  </li>
+                  </li>-->
                 </ul>
               </li>
               <li><a href="profile.php"><i class="material-icons md-dark">fingerprint</i> <?php echo $_SESSION['user']; ?></a></li>

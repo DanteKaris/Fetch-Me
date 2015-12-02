@@ -105,7 +105,7 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(../img/hero.jpg) no-repeat;
+  background: url(../img/hero5.jpg) no-repeat;
   background-size: cover;
   }
 }
@@ -191,6 +191,44 @@ hr {
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
+table.requests {
+  border: none;
+  margin: auto;
+  width: 100%;
+
+  tr {
+    height: 40px;
+    transition: all .1s linear;
+  }
+  tr:nth-child(even) {
+    background: aqua;
+  }
+  tr:nth-child(odd) {
+    background: whitesmoke;
+  }
+  tr:last-child {
+    background: none;
+  }
+  tr:hover {
+    height: 50px;
+    background: silver;
+  }
+  tr:nth-child(1):hover {
+    height: 40px;
+    background: whitesmoke;
+  }
+}
+
+@media screen and (max-device-width: 800px) {
+  table.requests {
+    td:nth-child(2), td:nth-child(4), td:nth-child(4), th:nth-child(2), th:nth-child(4), th:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/*
 .cb-slideshow,
 .cb-slideshow:after {
     position: fixed;
@@ -300,5 +338,6 @@ hr {
 @media screen and (max-width: 600px) {
     .cb-slideshow li div h3 { font-size: 80px }
 }
+*/
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/

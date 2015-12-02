@@ -69,7 +69,7 @@ if (isset($_SESSION['user'])) {
         </tr>
         <tr>
           <th><label for="password"><i class="material-icons">lock</i></label></th>
-          <td><input type="password" name="password" placeholder="<?php echo $password; ?>" required disabled /></td>
+          <td><input type="password" name="password" value="<?php echo $password; ?>" required disabled /></td>
         </tr>
       </table>
     </fieldset>

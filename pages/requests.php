@@ -20,8 +20,18 @@ require '../php/header_ad.inc.php';
 require '../php/db/connect.inc.php';
 ?>
 
+<div class="row">
+ <div class="col-12">
   <form action="requests.php" method="post">
-    <table>
+    <table class="requests">
+      <tr>
+        <th>Approve</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Username</th>
+      </tr>
 
 <?php
 $usersQuery = "SELECT * FROM users WHERE approved = 'n'";
@@ -61,5 +71,7 @@ if ($newUsers->num_rows > 0) {
       </tr>
     </table>
   </form>
+  </div>
+  </div>
 </body>
 </html>
