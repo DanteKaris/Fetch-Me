@@ -27,11 +27,11 @@ session_start();
 <body>
   <div class="row">
     <header id="index" style="background: none;">
-      <div class="col-4"></div>
+      <div class="col-5"></div>
       <div class="col-4">
         <img src="img/main_logo.png" alt="Logo" />
       </div>
-      <div class="col-4"></div>
+      <div class="col-3"></div>
     </header>
   </div>
 
