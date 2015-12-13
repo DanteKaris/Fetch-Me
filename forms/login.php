@@ -82,6 +82,7 @@ if (isset($_POST['submit'])) {
             }
 
         } else {
+            header('Location: '.$_SERVER['HTTP_REFERER']);
             echo 'You have not yet been approved by admin';
         }
     }

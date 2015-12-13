@@ -10,6 +10,7 @@ session_start();
   <title>Fetch Me!</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/preloader.css" />
   <link type="image/icon" rel="icon" href="../img/favicon.png" height="32px" width="32px" />
 </head>
 <style>
@@ -25,6 +26,13 @@ session_start();
   }
 </style>
 <body>
+
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+
   <div class="row">
     <header id="index" style="background: none;">
       <div class="col-5"></div>
@@ -156,6 +164,9 @@ session_start();
       </form>
     </div>
   </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
 

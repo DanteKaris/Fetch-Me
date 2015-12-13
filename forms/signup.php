@@ -118,6 +118,7 @@ if (isset($_POST['submit'])) {
                 $_SESSION['username'] = $data['username'];
                 $_SESSION['admin'] = $data['admin'];
 
+                header('Location: '.$_SERVER['HTTP_REFERER']);
                 echo 'Waiting for admin to confirm request';
             }
         }
